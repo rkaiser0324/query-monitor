@@ -30,7 +30,7 @@ if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
 }
 
 # No autoloaders for us. See https://github.com/johnbillion/query-monitor/issues/7
-$qm_dir = dirname( dirname( __FILE__ ) );
+$qm_dir = WP_CONTENT_DIR . '/plugins/query-monitor';
 $plugin = "{$qm_dir}/classes/Plugin.php";
 
 if ( ! is_readable( $plugin ) ) {
