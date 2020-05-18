@@ -119,7 +119,7 @@ abstract class QM_Dispatcher {
 			return true;
 		}
 
-		return self::user_verified();
+		return defined('QM_FORCE_ENABLE') || self::user_verified();
 
 	}
 
